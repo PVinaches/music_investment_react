@@ -1,19 +1,21 @@
 @import "./general/index.css";
 
 .card {
-    /* Order */
-    display: flex;
-    margin: 2rem auto;
-    padding: 1rem;
-    justify-content: center;
+  /* Order */
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .2rem;
+  justify-content: center;
 
-    /* Shape */
-    border-radius: 1.2rem;
+  /* Shape */
+  border-radius: 1.2rem;
 
-    /* Colors */
-    background-color: var(--purple);
-    box-shadow: 0 0.3rem 0.3rem var(--red);
+  /* Colors */
+  box-shadow: 0 0.3rem 0.3rem var(--red);
 
-    /* Font */
-    font-weight: var(--font-subtitle);
+  /* Font */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--font-subtitle);
 }

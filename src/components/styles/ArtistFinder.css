@@ -1,0 +1,62 @@
+@import "./general/index.css";
+
+.global-artist-finder {
+  background-color: var(--purple);
+}
+
+.artist-finder {
+  display: inherit;
+  flex-flow: column wrap;
+  justify-content: stretch;
+  max-width: 100%;
+
+  /* Text */
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+}
+
+form > div {
+  margin: 0.5rem;
+  justify-content: stretch;
+}
+
+input,
+button {
+  /* Box */
+  max-width: 100%;
+  border-radius: 2rem;
+  border: 1px solid var(--red);
+  max-width: 100%;
+
+  /* Text */
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-align: center;
+}
+
+input {
+  /* Box */
+  padding: 1rem;
+
+  /* Text color */
+  color: var(--blue);
+}
+
+button {
+  padding: 1rem 4rem;
+
+  /* Colors */
+  background-color: var(--blue);
+  color: var(--pink);
+
+  /* Cursor type */
+  cursor: pointer;
+}
+
+/* Hovering behavior */
+button:hover {
+  background-color: var(--hover-blue);
+  filter: brightness(1.2);
+}

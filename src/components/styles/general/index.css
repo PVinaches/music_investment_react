@@ -10,12 +10,15 @@
   box-sizing: border-box;
 }
 
+/* General html properties */
 html {
   /* Colors scheme */
   --blue: #021538;
+  --hover-blue: #062b70;
   --purple: #3e0161;
+  --light-purple: #5f3479;
   --red: #70251b;
-  --pink: #FDEEE8;
+  --pink: #fdeee8;
   --white: #ffffff;
 
   /* Font weight scheme */
@@ -29,22 +32,25 @@ html {
 }
 
 .name-app {
+  /* Font */
   color: var(--white);
   font-weight: var(--font-title);
-  font-size: clamp(20px, 2rem, 3vw);
+  font-size: clamp(20px, 3rem, 4vw);
+
+  /* Order */
+  align-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 body {
   /* Order */
   display: flex;
   flex-flow: column wrap;
-  align-items: stretch;
-  align-content: space-around;
   justify-content: center;
 
   /* Size */
-  margin: 0.5rem;
-  padding: 0.5rem;
+  padding: .5rem;
   height: 100vh;
   width: 100vw;
 
@@ -52,5 +58,6 @@ body {
   background-color: var(--blue);
 
   /* Font size */
+  font-family: inherit;
   font-size: clamp(14px, 1.6rem, 2vw);
 }

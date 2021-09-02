@@ -1,0 +1,5 @@
+@import "./general/index.css";
+
+.global-artist-info {
+  background-color: var(--light-purple);
+}
