@@ -1,7 +1,10 @@
+import ArtistFinder from "./components/scripts/ArtistFinder"
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2 className="name-app">Music Investments</h2>
+      <ArtistFinder />
     </div>
   );
 }
