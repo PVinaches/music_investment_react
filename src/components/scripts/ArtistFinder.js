@@ -3,7 +3,7 @@ import Card from "./Card";
 
 import { useState } from "react";
 
-const ArtistFinder = () => {
+const ArtistFinder = (props) => {
   // Declare artist name
   const [enteredArtist, setEnteredArtist] = useState("");
 
@@ -15,7 +15,6 @@ const ArtistFinder = () => {
   //   Listen to the submit button and call find artists API endpoint
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(enteredArtist);
 
     const urlSearchSinger =
       "https://api-test.anotemusic.com/api/v1/artists/search/" + enteredArtist;
@@ -28,14 +27,8 @@ const ArtistFinder = () => {
     })
       .then((response) => response.json())
       .then((response) => {
-        const totalNumberArtists = response.result.length;
-        if (!totalNumberArtists) {
-          return console.log("Nothing found");
-        }
-        for (let i = 0; i < totalNumberArtists; i++) {
-          console.log(response.result[i]);
-        }
-        return console.log("done");
+        const findings = response.result;
+        props.onSaveArtistName(findings);
       });
     setEnteredArtist("");
   };
