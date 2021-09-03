@@ -1,16 +1,15 @@
-import ArtistFinder from "./components/scripts/ArtistFinder";
-import ArtistInfo from "./components/scripts/ArtistInfo";
+import Artist from "./components/scripts/Artist";
+import Songs from "./components/scripts/Songs.js"
 
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
-  const [artistFinderData, setArtistFinderData] = useState(null);
 
   return (
     <div>
       <h2 className="name-app">Music Investments</h2>
-      <ArtistFinder onSaveArtistName={setArtistFinderData} />
-      <ArtistInfo artistFindData={artistFinderData} />
+      <Artist />
+      <Songs />
     </div>
   );
 }
