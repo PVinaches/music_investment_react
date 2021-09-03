@@ -1,4 +1,4 @@
-import "../styles/ArtistInfo.css";
+import "../styles/TableCards.css";
 import Card from "./Card";
 
 const ContractInfo = (props) => {
@@ -15,43 +15,29 @@ const ContractInfo = (props) => {
   // Table with contract information
   return (
     <div>
-      <Card className="global-artist-info">
-        <>
-          {Object.keys(contractInfo).map((key) => {
-            return (
-              <table>
+      <Card className="global-info">
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Amount when created</th>
+            <th>Amount raised</th>
+            <th>Sales last year</th>
+          </tr>
+          <>
+            {Object.keys(contractInfo).map((key) => {
+              return (
                 <tr>
-                  <td>Id</td>
                   <td>{contractInfo[key].id}</td>
-                </tr>
-                <tr>
-                  <td>Name</td>
                   <td>{contractInfo[key].name}</td>
-                </tr>
-                <tr>
-                  <td>Country</td>
-                  <td>{contractInfo[key].location}</td>
-                </tr>
-                <tr>
-                  <td>Currency</td>
-                  <td>{contractInfo[key].currency}</td>
-                </tr>
-                <tr>
-                  <td>Amount when created</td>
                   <td>{contractInfo[key].amountCreated}</td>
-                </tr>
-                <tr>
-                  <td>Amount raised</td>
                   <td>{contractInfo[key].amountRaised}</td>
-                </tr>
-                <tr>
-                  <td>Sales last year</td>
                   <td>{contractInfo[key].salesLastYear}</td>
                 </tr>
-              </table>
-            );
-          })}
-        </>
+              );
+            })}
+          </>
+        </table>
       </Card>
     </div>
   );

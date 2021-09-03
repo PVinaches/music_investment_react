@@ -1,4 +1,4 @@
-import "../styles/ArtistFinder.css";
+import "../styles/FormCards.css";
 import Card from "./Card";
 
 import { useState } from "react";
@@ -36,8 +36,8 @@ const ArtistFinder = (props) => {
   // Form card
   return (
     <div>
-      <Card className="global-artist-finder">
-        <form className="artist-finder" onSubmit={submitHandler}>
+      <Card className="global-finder">
+        <form className="finder" onSubmit={submitHandler}>
           <h3> Artists Finder</h3>
           <div>
             <label>Enter the artist name</label>

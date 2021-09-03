@@ -1,4 +1,4 @@
-import "../styles/ArtistInfo.css";
+import "../styles/TableCards.css";
 import Card from "./Card";
 
 const ArtistInfo = (props) => {
@@ -17,7 +17,7 @@ const ArtistInfo = (props) => {
   // Table with artist information
   return (
     <div>
-      <Card className="global-artist-info">
+      <Card className="global-info">
         <>
           {Object.keys(artistInfo).map((key) => {
             return (

@@ -1,0 +1,23 @@
+@import "./general/index.css";
+
+.global-info {
+  display: flex;
+  background-color: var(--light-purple);
+}
+
+table {
+  overflow: auto;
+  max-width: 100%;
+}
+
+th,
+tr,
+td {
+  /* Box */
+  border: 1px solid var(--blue);
+  padding: 0.1rem;
+
+  /* Text */
+  text-align: center;
+  font-size: clamp(12px, 1.6rem, 2vw);
+}

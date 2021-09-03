@@ -1,4 +1,4 @@
-import "../styles/ArtistFinder.css";
+import "../styles/ButtonCards.css";
 import Card from "./Card";
 
 const SongsComplete = (props) => {
@@ -24,7 +24,7 @@ const SongsComplete = (props) => {
   //   Search button card
   return (
     <div>
-      <Card className="global-artist-finder">
+      <Card className="global">
         <div>
           <h3> Songs Listing</h3>
           <button onClick={searchHandler}>Show all songs</button>

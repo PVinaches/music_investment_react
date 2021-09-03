@@ -1,0 +1,14 @@
+@import "./general/index.css";
+
+.global {
+  background-color: var(--purple);
+  display: flex;
+}
+
+h3 {
+  /* Order */
+  padding: 0.3rem;
+
+  /* Text */
+  text-align: center;
+}

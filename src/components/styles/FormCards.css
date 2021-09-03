@@ -1,13 +1,15 @@
 @import "./general/index.css";
 
-.global-artist-finder {
+.global-finder {
   background-color: var(--purple);
+  display: flex;
 }
 
-.artist-finder {
-  display: inherit;
+.finder {
+  /* Box */
   flex-flow: column wrap;
   justify-content: stretch;
+  max-height: 100%;
   max-width: 100%;
 
   /* Text */
@@ -17,7 +19,7 @@
 }
 
 form > div {
-  margin: 0.5rem;
+  margin: 0.3rem;
   justify-content: stretch;
 }
 
@@ -37,7 +39,7 @@ button {
 }
 
 input {
-  /* Box */
+  /* Order */
   padding: 1rem;
 
   /* Text color */

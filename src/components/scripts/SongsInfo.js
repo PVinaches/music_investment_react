@@ -1,4 +1,4 @@
-import "../styles/ArtistInfo.css";
+import "../styles/TableCards.css";
 import Card from "./Card";
 
 const SongsInfo = (props) => {
@@ -9,34 +9,21 @@ const SongsInfo = (props) => {
     return null;
   }
 
-  Object.keys(songsInfo).map((key) => {
-    return (
-      <tr>
-        <td>{songsInfo[key].id}</td>
-        <td>{songsInfo[key].soundcloudUrl}</td>
-        <td>{songsInfo[key].commaSeparatedTags}</td>
-        <td>{songsInfo[key].albumName}</td>
-      </tr>
-    );
-  });
-
   // Table with songs information
   return (
     <div>
-      <Card className="global-artist-info">
+      <Card className="global-info">
         <table>
-          <th>
-            <td>Id</td>
-            <td>Soundcloud</td>
-            <td>Music type</td>
-            <td>Album name</td>
-          </th>
+          <tr>
+            <th>Id</th>
+            <th>Music type</th>
+            <th>Album name</th>
+          </tr>
           <>
             {Object.keys(songsInfo).map((key) => {
               return (
                 <tr>
                   <td>{songsInfo[key].id}</td>
-                  <td>{songsInfo[key].soundcloudUrl}</td>
                   <td>{songsInfo[key].commaSeparatedTags}</td>
                   <td>{songsInfo[key].albumName}</td>
                 </tr>
