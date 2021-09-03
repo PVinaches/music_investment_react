@@ -4,7 +4,7 @@ import Card from "./Card";
 const ContractInfo = (props) => {
   const contractInfo = props.contractFindData;
 
-  //   Check if the information has been retrieved
+  // Check if the information has been retrieved
   if (contractInfo === null) {
     return null;
   }
@@ -12,7 +12,7 @@ const ContractInfo = (props) => {
     return "Nothing found. Try other search.";
   }
 
-  //   Table with contract information
+  // Table with contract information
   return (
     <div>
       <Card className="global-artist-info">

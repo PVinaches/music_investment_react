@@ -7,12 +7,12 @@ const ArtistFinder = (props) => {
   // Declare artist name
   const [enteredArtist, setEnteredArtist] = useState("");
 
-  //   Listen to the artist name input
+  // Listen to the artist name input
   const artistChangeHandler = (event) => {
     setEnteredArtist(event.target.value);
   };
 
-  //   Listen to the submit button and call find artists API endpoint
+  // Listen to the submit button and call find artists API endpoint
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -22,8 +22,7 @@ const ArtistFinder = (props) => {
     fetch(urlSearchSinger, {
       method: "GET",
       headers: {
-        authorization:
-          "INSERT KEY",
+        authorization: "INSERT KEY",
       },
     })
       .then((response) => response.json())
@@ -34,7 +33,7 @@ const ArtistFinder = (props) => {
     setEnteredArtist("");
   };
 
-  //   Form card
+  // Form card
   return (
     <div>
       <Card className="global-artist-finder">

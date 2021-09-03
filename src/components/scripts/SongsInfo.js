@@ -4,7 +4,7 @@ import Card from "./Card";
 const SongsInfo = (props) => {
   const songsInfo = props.songsCompleteData;
 
-  //   Check if the information has been retrieved
+  // Check if the information has been retrieved
   if (songsInfo === undefined || songsInfo === null) {
     return null;
   }
@@ -20,7 +20,7 @@ const SongsInfo = (props) => {
     );
   });
 
-  //   Table with songs information
+  // Table with songs information
   return (
     <div>
       <Card className="global-artist-info">

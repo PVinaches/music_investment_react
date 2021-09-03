@@ -4,17 +4,17 @@ import Card from "./Card";
 const ArtistInfo = (props) => {
   const artistInfo = props.artistFindData;
 
-  //   Check if the information has been retrieved
+  // Check if the information has been retrieved
   if (artistInfo === null) {
     return null;
   }
 
-  //   Check if the artist is in the API database
+  // Check if the artist is in the API database
   if (artistInfo === undefined) {
     return "Nothing found. Try other search.";
   }
 
-  //   Table with artist information
+  // Table with artist information
   return (
     <div>
       <Card className="global-artist-info">

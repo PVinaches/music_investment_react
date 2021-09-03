@@ -11,8 +11,7 @@ const SongsComplete = (props) => {
     fetch(urlSearchAllSongs, {
       method: "GET",
       headers: {
-        authorization:
-          "INSERT KEY",
+        authorization: "INSERT KEY",
       },
     })
       .then((response) => response.json())
