@@ -3,21 +3,22 @@ import Card from "./Card";
 
 import { useState } from "react";
 
-const ArtistFinder = (props) => {
-  // Declare artist name
-  const [enteredArtist, setEnteredArtist] = useState("");
+const ContractsFinder = (props) => {
+  // Declare contract
+  const [enteredContract, setEnteredContract] = useState("");
 
-  //   Listen to the artist name input
-  const artistChangeHandler = (event) => {
-    setEnteredArtist(event.target.value);
+  //   Listen to the artist id input
+  const contractChangeHandler = (event) => {
+    setEnteredContract(event.target.value);
   };
 
-  //   Listen to the submit button and call find artists API endpoint
+  //   Listen to the submit button and call find contracts API endpoint
   const submitHandler = (event) => {
     event.preventDefault();
 
     const urlSearchSinger =
-      "https://api-test.anotemusic.com/api/v1/artists/search/" + enteredArtist;
+      "https://api-test.anotemusic.com/api/v1/contracts/search/" +
+      enteredContract;
 
     fetch(urlSearchSinger, {
       method: "GET",
@@ -28,10 +29,10 @@ const ArtistFinder = (props) => {
     })
       .then((response) => response.json())
       .then((response) => {
-        const findings = response.result;
-        props.onSaveArtistName(findings);
+        const contracts = response.result;
+        props.onSaveContractData(contracts);
       });
-    setEnteredArtist("");
+    setEnteredContract("");
   };
 
   //   Form card
@@ -39,15 +40,15 @@ const ArtistFinder = (props) => {
     <div>
       <Card className="global-artist-finder">
         <form className="artist-finder" onSubmit={submitHandler}>
-          <h3> Artists Finder</h3>
+          <h3> Contracts Finder</h3>
           <div>
-            <label>Enter the artist name</label>
+            <label>Enter the artist name or id</label>
           </div>
           <div>
             <input
               type="text"
-              value={enteredArtist}
-              onChange={artistChangeHandler}
+              value={enteredContract}
+              onChange={contractChangeHandler}
             />
           </div>
           <div>
@@ -59,4 +60,4 @@ const ArtistFinder = (props) => {
   );
 };
 
-export default ArtistFinder;
+export default ContractsFinder;

@@ -2,8 +2,7 @@ import "../styles/ArtistFinder.css";
 import Card from "./Card";
 
 const SongsComplete = (props) => {
-
-  //   Listen to the submit button and call find artists API endpoint
+  //   Listen to the submit button and call find songs API endpoint
   const searchHandler = (event) => {
     event.preventDefault();
 
@@ -27,7 +26,10 @@ const SongsComplete = (props) => {
   return (
     <div>
       <Card className="global-artist-finder">
-        <button onClick={searchHandler}>Show all songs</button>
+        <div>
+          <h3> Songs Listing</h3>
+          <button onClick={searchHandler}>Show all songs</button>
+        </div>
       </Card>
     </div>
   );

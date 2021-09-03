@@ -1,7 +1,6 @@
 import Artist from "./components/scripts/Artist";
-import Songs from "./components/scripts/Songs.js"
-
-// import { useState } from "react";
+import Contracts from "./components/scripts/Contracts";
+import Songs from "./components/scripts/Songs"
 
 function App() {
 
@@ -9,6 +8,7 @@ function App() {
     <div>
       <h2 className="name-app">Music Investments</h2>
       <Artist />
+      <Contracts />
       <Songs />
     </div>
   );

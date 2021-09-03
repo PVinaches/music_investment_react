@@ -14,35 +14,54 @@ const ArtistInfo = (props) => {
     return "Nothing found. Try other search.";
   }
 
-  // Create object with the artist information to construct the table
-  const artistDict = {
-    Id: artistInfo[0].id,
-    Name: artistInfo[0].name,
-    Country: artistInfo[0].location,
-    "Music type": artistInfo[0].commaSeparatedTags,
-    Youtube: artistInfo[0].youtubeUrl,
-    Twitter: artistInfo[0].twitterUrl,
-    Instagram: artistInfo[0].instagramUrl,
-    Soundcloud: artistInfo[0].soundcloudUrl,
-    Review: artistInfo[0].ownReview,
-  };
-
   //   Table with artist information
   return (
     <div>
       <Card className="global-artist-info">
-        <table>
-          <>
-            {Object.keys(artistDict).map((key) => {
-              return (
+        <>
+          {Object.keys(artistInfo).map((key) => {
+            return (
+              <table>
                 <tr>
-                  <td>{key}</td>
-                  <td>{artistDict[key]}</td>
+                  <td>Id</td>
+                  <td>{artistInfo[key].id}</td>
                 </tr>
-              );
-            })}
-          </>
-        </table>
+                <tr>
+                  <td>Name</td>
+                  <td>{artistInfo[key].name}</td>
+                </tr>
+                <tr>
+                  <td>Country</td>
+                  <td>{artistInfo[key].location}</td>
+                </tr>
+                <tr>
+                  <td>Music type</td>
+                  <td>{artistInfo[key].commaSeparatedTags}</td>
+                </tr>
+                <tr>
+                  <td>Youtube</td>
+                  <td>{artistInfo[key].youtubeUrl}</td>
+                </tr>
+                <tr>
+                  <td>Twitter</td>
+                  <td>{artistInfo[key].twitterUrl}</td>
+                </tr>
+                <tr>
+                  <td>Instagram</td>
+                  <td>{artistInfo[key].instagramUrl}</td>
+                </tr>
+                <tr>
+                  <td>Soundcloud</td>
+                  <td>{artistInfo[key].soundcloudUrl}</td>
+                </tr>
+                <tr>
+                  <td>Review</td>
+                  <td>{artistInfo[key].ownReview}</td>
+                </tr>
+              </table>
+            );
+          })}
+        </>
       </Card>
     </div>
   );
