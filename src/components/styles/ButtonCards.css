@@ -1,7 +1,7 @@
 @import "./general/index.css";
 
 .global {
-  background-color: var(--purple);
+  background-color: var(--dark-blue);
   display: flex;
 }
 
@@ -11,4 +11,5 @@ h3 {
 
   /* Text */
   text-align: center;
+  color: var(--white);
 }

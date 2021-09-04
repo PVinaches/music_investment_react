@@ -13,13 +13,13 @@
 /* General html properties */
 html {
   /* Colors scheme */
-  --blue: #021538;
-  --hover-blue: #062b70;
-  --purple: #3e0161;
-  --light-purple: #5f3479;
+  --black: #2d2d2d;
+  --dark-blue: #063957;
+  --light-blue: #0d7ab9;
+  --lighter-blue: #51b1ce;
   --red: #70251b;
   --pink: #fdeee8;
-  --white: #ffffff;
+  --white: #f4f4f4;
 
   /* Font weight scheme */
   --font-title: 600;
@@ -28,12 +28,12 @@ html {
   /* Other font properties */
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
-  color: var(--pink);
+  color: var(--black);
 }
 
 .name-app {
   /* Font */
-  color: var(--white);
+  color: var(--black);
   font-weight: var(--font-title);
   font-size: clamp(20px, 3rem, 4vw);
 
@@ -56,7 +56,7 @@ body {
   padding: 0.5rem;
 
   /* Background color */
-  background-color: var(--blue);
+  background-color: var(--white);
 
   /* Font size */
   font-family: inherit;

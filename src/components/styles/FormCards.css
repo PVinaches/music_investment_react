@@ -1,8 +1,9 @@
 @import "./general/index.css";
 
 .global-finder {
-  background-color: var(--purple);
+  background-color: var(--dark-blue);
   display: flex;
+  color: var(--white);
 }
 
 .finder {
@@ -43,14 +44,14 @@ input {
   padding: 1rem;
 
   /* Text color */
-  color: var(--blue);
+  color: var(--pink);
 }
 
 button {
   padding: 1rem 4rem;
 
   /* Colors */
-  background-color: var(--blue);
+  background-color: var(--lighter-blue);
   color: var(--pink);
 
   /* Cursor type */
@@ -59,6 +60,6 @@ button {
 
 /* Hovering behavior */
 button:hover {
-  background-color: var(--hover-blue);
+  background-color: var(--light-blue);
   filter: brightness(1.2);
 }
