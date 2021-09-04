@@ -1,4 +1,4 @@
-import SongsComplete from "./SongsComplete.js";
+import SongsFinder from "./SongsFinder.js";
 import SongsInfo from "./SongsInfo.js";
 
 import { useState } from "react";
@@ -8,7 +8,7 @@ function Songs() {
 
   return (
     <div>
-      <SongsComplete onSaveSongsList={setSongData} />
+      <SongsFinder onSaveSongsList={setSongData} />
       <SongsInfo songsCompleteData={songsData} />
     </div>
   );

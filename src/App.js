@@ -18,7 +18,7 @@ function App() {
       </div>
 
       {/* Endpoints */}
-      <h2 className="name-app">Music Investments</h2>
+      <img src="https://anotemusic.com/wp-content/uploads/2020/09/logo_standard_negative.svg" alt="ANote Music" className="logo" srcset="https://anotemusic.com/wp-content/uploads/2020/09/logo_standard_negative.svg 1x, https://anotemusic.com/wp-content/uploads/2020/09/logo_standard_negative.svg 2x"/>
       <Artist />
       <Contracts />
       <Songs />

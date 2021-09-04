@@ -3,7 +3,7 @@ import Card from "./Card";
 
 import getToken from "../../getToken";
 
-const SongsComplete = (props) => {
+const SongsFinder = (props) => {
   //   Listen to the submit button and call find songs API endpoint
   const searchHandler = (event) => {
     event.preventDefault();
@@ -40,4 +40,4 @@ const SongsComplete = (props) => {
   );
 };
 
-export default SongsComplete;
+export default SongsFinder;
