@@ -1,6 +1,8 @@
 import "../styles/ButtonCards.css";
 import Card from "./Card";
 
+import getToken from "../../getToken";
+
 const SongsComplete = (props) => {
   //   Listen to the submit button and call find songs API endpoint
   const searchHandler = (event) => {
@@ -8,17 +10,21 @@ const SongsComplete = (props) => {
 
     const urlSearchAllSongs = "https://api-test.anotemusic.com/api/v1/songs";
 
-    fetch(urlSearchAllSongs, {
-      method: "GET",
-      headers: {
-        authorization: "INSERT KEY",
-      },
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        const allSongs = response.result;
-        props.onSaveSongsList(allSongs);
-      });
+    const searchAllSongs = (token) => {
+      fetch(urlSearchAllSongs, {
+        method: "GET",
+        headers: {
+          authorization: token,
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          const allSongs = response.result;
+          props.onSaveSongsList(allSongs);
+        });
+    };
+
+    getToken().then(searchAllSongs);
   };
 
   //   Search button card

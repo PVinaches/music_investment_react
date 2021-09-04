@@ -1,6 +1,8 @@
 import "../styles/FormCards.css";
 import Card from "./Card";
 
+import getToken from "../../getToken";
+
 import { useState } from "react";
 
 const ArtistFinder = (props) => {
@@ -19,18 +21,22 @@ const ArtistFinder = (props) => {
     const urlSearchSinger =
       "https://api-test.anotemusic.com/api/v1/artists/search/" + enteredArtist;
 
-    fetch(urlSearchSinger, {
-      method: "GET",
-      headers: {
-        authorization: "INSERT KEY",
-      },
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        const findings = response.result;
-        props.onSaveArtistName(findings);
-      });
-    setEnteredArtist("");
+    const searchArtists = (token) => {
+      fetch(urlSearchSinger, {
+        method: "GET",
+        headers: {
+          authorization: token,
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          const findings = response.result;
+          props.onSaveArtistName(findings);
+        });
+      setEnteredArtist("");
+    };
+
+    getToken().then(searchArtists);
   };
 
   // Form card

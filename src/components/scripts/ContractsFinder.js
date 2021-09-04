@@ -1,6 +1,8 @@
 import "../styles/FormCards.css";
 import Card from "./Card";
 
+import getToken from "../../getToken";
+
 import { useState } from "react";
 
 const ContractsFinder = (props) => {
@@ -32,18 +34,22 @@ const ContractsFinder = (props) => {
       "https://api-test.anotemusic.com/api/v1/contracts/search/" +
       enteredContract;
 
-    fetch(urlSearchContract, {
-      method: "GET",
-      headers: {
-        authorization: "INSERT KEY",
-      },
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        const contracts = response.result;
-        props.onSaveContractData(contracts);
-      });
-    setEnteredContract("");
+    const searchContracts = (token) => {
+      fetch(urlSearchContract, {
+        method: "GET",
+        headers: {
+          authorization: token,
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          const contracts = response.result;
+          props.onSaveContractData(contracts);
+        });
+      setEnteredContract("");
+    };
+
+    getToken().then(searchContracts);
   };
 
   // Form card
